@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themes</title>
+</head>
+<body>
+
+<table border="1" style="width: 1400px; margin: auto; margin-top: 40px;">
+    <tr>
+        <th colspan="11" style="height: 80px; font-size: 20px;">               Backend Python Django(Standart) N28 guruhi o'quvchisi {{info.name}}<br>
+            5-oy oraliq nazorat imtihoni natijalari (Chilonzor filialili, 17.02.2024 08:00)
+        </th>
+        
+    </tr>
+    <tr style="height: 50px;">
+        <th rowspan="3" style="width: 60px;">ID</th>
+        <th rowspan="3" style="width: 400px;">FIO</th>
+        <th colspan="8" style="width: 900px; font-size: 20px;">Baholash mezonlari bo'yicha ballar</th>
+        <th rowspan="3" style="width: 60px;">JAMI(40)</th>
+    </tr>
+    <tr style="height: 30px;">
+        <th colspan="3">1</th>
+        <th colspan="3">2</th>
+        <th colspan="2">3</th>
+    </tr>
+    <tr style="height: 30px;">
+        {%for i in mezonlar.1%}
+        <th>{{i}}</th>
+        {%endfor%}
+        {%for i in mezonlar.2%}
+        <th>{{i}}</th>
+        {%endfor%}
+        {%for i in mezonlar.3%}
+        <th>{{i}}</th>
+        {%endfor%}
+    </tr>
+    <tr style="height: 30px;"">
+        <th>{{info.id}}</th>
+        <th>{{info.name}}</th>
+        {%for i in info.1%}
+        <th>{{i}}</th>
+        {%endfor%}
+        {%for i in info.2%}
+        <th>{{i}}</th>
+        {%endfor%}
+        {%for i in info.3%}
+        <th>{{i}}</th>
+        {%endfor%}
+        <th>{{info.jami}}</th>
+    </tr>
+</table>
+
+
+</body>
+</html>
